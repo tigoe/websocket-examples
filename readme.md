@@ -7,15 +7,16 @@ A websocket connection works as follows: the client request via HTTP or HTTPS. T
 These examples use two different server-side websocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the websocket connection as a route. 
 
 ## Servers
-* [ExpressWsServer](ExpressWsServer/) - a server example using [express-ws](https://www.npmjs.com/package/express-ws) and [express.js](https://expressjs.com/). 
-* [wsServerExample](wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws) - a server example using ws and [express.js](https://expressjs.com/)
+* [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws)
+* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
+* [wsServerExampleWithExpress](https://github.com/tigoe/websocket-examples/tree/main/wsServerExampleWithExpress/) - a server example using [ws](https://www.npmjs.com/package/ws) and [express.js](https://expressjs.com/)
 
 ## Clients
 These clients are duplicated in the `public` directory of each of the servers
-* [wsClientExample](wsClientExample/) - a node.js command-line client
-* [jsClient](jsClient/) - a browser-based example in native JavaScript
-* [p5jsClient](p5jsClient/) - a browser-based example in p5.js
-* [ArduinoWebsocketClient](ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library
+* [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client
+* [jsClient](https://github.com/tigoe/websocket-examples/tree/main/jsClient/) - a browser-based example in native JavaScript
+* [p5jsClient](https://github.com/tigoe/websocket-examples/tree/main/p5jsClient/) - a browser-based example in p5.js
+* [ArduinoWebsocketClient](https://github.com/tigoe/websocket-examples/tree/main/ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library
 
 
 
