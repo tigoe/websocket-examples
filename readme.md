@@ -9,7 +9,7 @@ These examples use two different server-side websocket libraries, [ws](https://w
 ## Servers
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws)
 * [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
-* [wsServerWithExpress](https://github.com/tigoe/websocket-examples/tree/main/wsServerWithExpress/) - a server example using [ws](https://www.npmjs.com/package/ws) and [express.js](https://expressjs.com/)
+* [WsServerWithExpress](https://github.com/tigoe/websocket-examples/tree/main/WsServerWithExpress/) - a server example using [ws](https://www.npmjs.com/package/ws) and [express.js](https://expressjs.com/)
 
 ## Clients
 These clients are duplicated in the `public` directory of each of the servers
