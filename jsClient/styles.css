@@ -1,0 +1,18 @@
+/* 
+Style sheet for template. 
+Since all the elements are inputs or spans, this just sets them 
+in columns.  
+
+created 6 Jan 2021 
+by Tom Igoe
+*/
+
+input {
+  position: sticky;
+  left: 200px;
+}
+
+span {
+  position: sticky;
+  left: 200px;
+}

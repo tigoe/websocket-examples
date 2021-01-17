@@ -1,0 +1,25 @@
+{
+  "name": "ws-server-with-express",
+  "version": "0.0.1",
+  "description": "A webSocket Server with Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.3.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://github.com/tigoe/NodeExamples/"
+  },
+  "license": "",
+  "keywords": [
+    "node",
+    "ws",
+    "express"
+  ]
+}
