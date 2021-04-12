@@ -9,7 +9,7 @@ by Tom Igoe
 var WebSocketServer = require('ws').Server;   // webSocket library
 
 // configure the webSocket server:
-const wssPort = process.env.PORT || 8081;             // port number for the webSocket server
+const wssPort = process.env.PORT || 8080;             // port number for the webSocket server
 const wss = new WebSocketServer({port: wssPort}); // the webSocket server
 var clients = new Array;         // list of client connections
 
