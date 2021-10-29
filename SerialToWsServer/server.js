@@ -1,7 +1,7 @@
 /*
   Serial To Websocket server
 
-  Expected call:
+  Expected command line invocation:
   node server.js portname linemode
 
   * portname is the serial port path
