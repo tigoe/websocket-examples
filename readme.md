@@ -12,6 +12,7 @@ These examples use two different server-side websocket libraries, [ws](https://w
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws)
 * [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
 * [WsServerWithExpress](https://github.com/tigoe/websocket-examples/tree/main/WsServerWithExpress/) - a server example using [ws](https://www.npmjs.com/package/ws) and [express.js](https://expressjs.com/)
+* [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line.
 
 ## Clients
 These clients are duplicated in the `public` directory of each of the servers
