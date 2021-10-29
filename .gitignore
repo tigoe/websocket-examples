@@ -2,3 +2,4 @@
 */arduino_secrets.h
 *.DS_Store
 ArduinoWebsocketClient/arduino_secrets.h
+*/node_modules/*

@@ -1,0 +1,23 @@
+{
+  "name": "serialtowsserver",
+  "version": "0.0.4",
+  "description": "A serialport-to-websocket server example",
+  "main": "server.js",
+  "dependencies": {
+    "serialport": "^9.2.4",
+    "ws": "^8.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "serial",
+    "websockets",
+    "ws",
+    "p5js"
+  ],
+  "author": "Tom Igoe",
+  "license": "ISC"
+}
