@@ -1,11 +1,11 @@
 {
   "name": "express-ws-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A websocket server using express.js and express-ws.js",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
-    "express-ws": "^4.0.0"
+    "express-ws": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {
