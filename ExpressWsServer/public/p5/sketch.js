@@ -7,28 +7,30 @@
   the websocket server address. 
   
   created 12 Apr 2021
-  modified 11 Nov 2021
+  modified 12 Nov 2021
   by Tom Igoe
 */
 
+// change 'wss' to 'ws' for running without SSL):
 let socket = new WebSocket('wss://' + window.location.host);
-let sensorData; 
+let sensorData = 'not connected'; 
 let xPos = 10;
+let textDiv;
 
 function setup() {
 	// The socket connection needs two event listeners:
 	socket.onopen = openSocket;
 	socket.onmessage = getData;
-
-	// make a new div and position it at 10, 10:
-	text = createDiv("Sensor reading:");
-	text.position(10,10);
+  
+	// make a new div and position it at 10, 50:
+	textDiv = createDiv("Sensor reading:");
+	textDiv.position(10,50);
 }
 
 function draw() {
-  text.html(sensorData);
-  text.position(xPos, 10);        // position the text
-}
+  textDiv.html(sensorData);
+  textDiv.position(xPos, 50);        // position the text
+ }
 
 function openSocket() {
 	sensorData = "Socket open";

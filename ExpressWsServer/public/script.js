@@ -8,7 +8,7 @@
   by Tom Igoe
 */
 // get the server URL from the window.location:
-// change 'wss' to 'ws for running without SSL):
+// change 'wss' to 'ws' for running without SSL):
 let serverURL = 'wss://' + window.location.host;
 // the webSocket connection:
 let socket;
