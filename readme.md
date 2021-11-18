@@ -9,10 +9,9 @@ WebSockets bear some resemblance to MQTT, a message-based protocol for communica
 These examples use two different server-side websocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the websocket connection as a route. 
 
 ## Servers
-* [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws)
+* [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws). This example does not serve HTTP requests, just WebSocket connections
 * [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
-* [WsServerWithExpress](https://github.com/tigoe/websocket-examples/tree/main/WsServerWithExpress/) - a server example using [ws](https://www.npmjs.com/package/ws) and [express.js](https://expressjs.com/)
-* [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line.
+* [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
 
 ## Clients
 These clients are duplicated in the `public` directory of each of the servers
@@ -33,7 +32,7 @@ This will download the necessary libraries. Then run the server like so:
 node server.js
 ````
 
-The two servers `ExpressWsServer` and `WsServerWithExpress` are both HTTP servers that also support webSockets. When you're running them, open a browser and enter `http://localhost:8080/` in the address bar. The server script will serve you the `index.html` page in the `public` folder, which is a browser-based client of the server. You can also load the [jsClient](jsClient) example by opening the `index.html` page from that example in a browser. It will connect to the server running on your terminal window as well. 
+The  server `ExpressWsServer` is an HTTP server that also support webSockets. When you're running it, open a browser and enter `http://localhost:8080/` in the address bar. The server script will serve you the `index.html` page in the `public` folder, which is a browser-based client of the server. You can also load the [jsClient](jsClient) example by opening the `index.html` page from that example in a browser. It will connect to the server running on your terminal window as well. 
 
 To stop any node.js script, type control-C in the terminal window. 
 
