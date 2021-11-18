@@ -20,7 +20,7 @@
 #include "arduino_secrets.h"
 
 // fill in your server address here:
-char serverAddress[] = "your.webaddress.com";
+char serverAddress[] = "echo.websocket.org";
 // try to connect on the standard HTTPS port:
 int port = 443;
 
