@@ -8,17 +8,16 @@
   by Tom Igoe
 */
 
-
 var express = require('express');			    // include express.js
 // a local instance of express:
 var server = express();
 // instance of the websocket server:
-var wsServer = require('express-ws')(server); 
+var wsServer = require('express-ws')(server);
 // list of client connections:
 var clients = new Array;
 
 // serve static files from /public:
-server.use('/', express.static('public')); 
+server.use('/', express.static('public'));
 
 // this runs after the server successfully starts:
 function serverStart() {
