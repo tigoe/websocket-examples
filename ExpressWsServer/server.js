@@ -26,15 +26,15 @@ function serverStart() {
   console.log('Server listening on port ' + port);
 }
 
-function handleWs(ws, request) {
+function handleClient(thisClient, request) {
   console.log("New Connection");        // you have a new client
-  clients.push(ws);    // add this client to the clients array
+  clients.push(thisClient);    // add this client to the clients array
 
   function endClient() {
     // when a client closes its connection
     // get the client's position in the array
     // and delete it from the array:
-    var position = clients.indexOf(ws);
+    var position = clients.indexOf(thisClient);
     clients.splice(position, 1);
     console.log("connection closed");
   }
@@ -46,8 +46,8 @@ function handleWs(ws, request) {
   }
 
   // set up client event listeners:
-  ws.on('message', clientResponse);
-  ws.on('close', endClient);
+  thisClient.on('message', clientResponse);
+  thisClient.on('close', endClient);
 }
 
 // This function broadcasts messages to all webSocket clients
@@ -61,4 +61,4 @@ function broadcast(data) {
 // start the server:
 server.listen(process.env.PORT || 3000, serverStart);
 // listen for websocket connections:
-server.ws('/', handleWs);
+server.ws('/', handleClient);
