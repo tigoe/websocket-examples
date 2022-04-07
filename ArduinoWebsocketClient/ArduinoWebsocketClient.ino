@@ -10,6 +10,7 @@
   http://librarymanager/All#WiFi101.h  for MKR1000
 
   created 11 Nov 2021
+  updated 7 Apr 2022
   by Tom Igoe
 */
 
@@ -20,7 +21,7 @@
 #include "arduino_secrets.h"
 
 // fill in your server address here:
-char serverAddress[] = "echo.websocket.org";
+char serverAddress[] = "tigoe-websocket-server.glitch.me";
 // try to connect on the standard HTTPS port:
 int port = 443;
 
@@ -35,6 +36,8 @@ long lastSend = 0;
 
 void setup() {
   Serial.begin(9600);
+  if(!Serial)  delay(3000);
+  
   // connect to WIFi:
   while ( WiFi.status() != WL_CONNECTED) {
     Serial.print("Attempting to connect to Network named: ");
@@ -42,7 +45,7 @@ void setup() {
     // Connect to WPA/WPA2 network:
     WiFi.begin(SECRET_SSID, SECRET_PASS);
   }
-
+  
   // print the SSID of the network you're attached to:
   Serial.print("SSID: ");
   Serial.println(WiFi.SSID());
@@ -51,12 +54,13 @@ void setup() {
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
   Serial.println(ip);
+  // API endpoint to connect to:
+  client.begin("/");
 }
 
 void loop() {
   Serial.println("starting WebSocket client");
-  client.begin();
-
+    
   while (client.connected()) {
     if (millis() - lastSend > interval) {
       // read sensor:
