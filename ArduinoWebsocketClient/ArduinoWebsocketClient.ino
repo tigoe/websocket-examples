@@ -8,15 +8,11 @@
   http://librarymanager/All#WiFiNINA.h  for Nano 33 IoT, MKR1010
   or
   http://librarymanager/All#WiFi101.h  for MKR1000
-
-  Here's a test with websocketd: 
-  char serverAddress[] = "x.x.x.x";  // replace with your computer's IP
-  then on your computer, run  websocketd (http://websocketd.com/):
-  $ websocketd --port=8080 tee log.txt
-  This will send the output to the command line and to a file called log.txt
-
+  
+  for more detail see the readme.md page. 
+  
   created 11 Nov 2021
-  updated 30 Dec 2022
+  updated 26 Feb 2023
   by Tom Igoe
 */
 
@@ -26,14 +22,20 @@
 // your passwords go in arduino_secrets.h
 #include "arduino_secrets.h"
 
-// fill in your server address here:
-// char serverAddress[] = "ws.postman-echo.com";
-char serverAddress[] = "192.168.1.165";
-// try to connect on the standard HTTPS port:
-int port = 8080;
+// settings for a local test with websocketd or your own server:
+// set up a WiFi client (not using SSL):
+// WiFiClient wifi;
+// char serverAddress[] = "192.168.1.91"; // fill in your computer's IP address
+// int port = 8080;        // port that websocketd is running on
+// char endpoint[] = "/";  // you can also leave this blank for websocketd
 
-// set up an SSL client (use WiFiClient if not using SSL):
-WiFiClient wifi;
+// settings for a test on postman.com's websocket echo server
+// set up a WiFi client ( using SSL):
+WiFiSSLClient wifi;
+char serverAddress[] = "ws.postman-echo.com";
+int port = 443;           // standard HTTPS port
+char endpoint[] = "/raw";
+
 // initialize the webSocket client
 WebSocketClient client = WebSocketClient(wifi, serverAddress, port);
 // message sending interval, in ms:
@@ -61,14 +63,17 @@ void setup() {
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
   Serial.println(ip);
-  // API endpoint to connect to:
-  client.begin();
+  // If there's an API endpoint to connect to, add it here.
+  // leave blank if there's no endpoint:
+  client.begin(endpoint);
 }
 
 void loop() {
   // if not connected to the socket server, try to connect:
   if (!client.connected()) {
     client.begin();
+    delay(1000);
+    Serial.println("attempting to connect to server");
     // skip the rest of the loop:
     return;
   }
@@ -84,6 +89,8 @@ void loop() {
     client.beginMessage(TYPE_TEXT);
     client.print(message);
     client.endMessage();
+    Serial.print("sending: ");
+    Serial.println(message);
     // update the timestamp:
     lastSend = millis();
   }
@@ -92,7 +99,7 @@ void loop() {
   int messageSize = client.parseMessage();
   // if there's a string with length > 0:
   if (messageSize > 0) {
-    Serial.println("Received a message:");
+    Serial.print("Received a message:");
     Serial.println(client.readString());
   }
 }
