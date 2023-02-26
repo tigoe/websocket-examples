@@ -32,10 +32,10 @@ that sends them. Neither will not broadcast to other clients. For a server that 
 
 ## Servers
 
-These examples use two different server-side WebSocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the WebSocket connection as a route. 
+These examples the server-side WebSocket library, [ws](https://www.npmjs.com/package/ws). 
 
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws). This example does not serve HTTP requests, just WebSocket connections
-* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). This example serves both normal HTTP requests for static pages, and WebSocket requests. 
+* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [ws](https://www.npmjs.com/package/ws). This example serves both normal HTTP requests for static pages, and WebSocket requests. 
 * [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a WebSocket server. This server can send serial data byte-by-byte to the WebSocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
 
 ### Running the Servers

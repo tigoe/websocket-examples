@@ -1,29 +1,22 @@
 {
-  "name": "express-ws-server",
-  "version": "0.0.2",
-  "description": "A websocket server using express.js and express-ws.js",
-  "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "express-ws": "^5.0.0"
+    "express": "^4.18.2",
+    "ws": "^8.12.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/tigoe/NodeExamples.git"
-  },
+  "name": "expresswsserver",
+  "version": "0.0.2",
+  "description": "a node.js server with express.js for HTTP and ws.js for websockets",
+  "main": "server.js",
+  "devDependencies": {},
   "keywords": [
-    "websocket",
-    "express"
+    "node",
+    "express",
+    "ws",
+    "websockets"
   ],
   "author": "Tom Igoe",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tigoe/NodeExamples/issues"
-  },
-  "homepage": "https://github.com/tigoe/NodeExamples#readme"
+  "license": "ISC"
 }

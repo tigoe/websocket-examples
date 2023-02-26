@@ -1,10 +1,12 @@
 /*
-  Websocket server with express.js and express-ws.js
-  (https://www.npmjs.com/package/express-ws)
+  Websocket server with express.js
+    (https://www.npmjs.com/package/express) and ws.js
+  (https://www.npmjs.com/package/ws)
   Serves an index page from /public. That page makes
   a websocket client back to this server.
 
   created 17 Jan 2021
+  modified 23 Feb 2023
   by Tom Igoe
 */
 
@@ -12,7 +14,11 @@ var express = require('express');			    // include express.js
 // a local instance of express:
 var server = express();
 // instance of the websocket server:
-var wsServer = require('express-ws')(server);
+var WebSocketServer = require('ws').Server;   // webSocket library
+// configure the webSocket server:
+const wssPort = process.env.PORT || 8080;             // port number for the webSocket server
+const wss = new WebSocketServer({port: wssPort}); // the webSocket server
+
 // list of client connections:
 var clients = new Array;
 
@@ -41,7 +47,7 @@ function handleClient(thisClient, request) {
   // if a client sends a message, print it out:
   function clientResponse(data) {
     console.log(request.connection.remoteAddress + ': ' + data);
-    broadcast(data);
+		broadcast(request.connection.remoteAddress + ': ' + data);
   }
 
   // set up client event listeners:
@@ -59,5 +65,5 @@ function broadcast(data) {
 
 // start the server:
 server.listen(process.env.PORT || 3000, serverStart);
-// listen for websocket connections:
-server.ws('/', handleClient);
+// listen for websocket clients and handle them:
+wss.on('connection', handleClient);
