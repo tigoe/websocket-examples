@@ -1,6 +1,6 @@
 /*
   Websocket server with express.js
-    (https://www.npmjs.com/package/express) and ws.js
+  (https://www.npmjs.com/package/express) and ws.js
   (https://www.npmjs.com/package/ws)
   Serves an index page from /public. That page makes
   a websocket client back to this server.
@@ -11,6 +11,10 @@
 */
 // include express, http, and ws libraries:
 const express = require("express");
+// the const {} syntax is called destructuring.
+// it allows you to pull just the one function 
+// you need from the libraries below without 
+// making an instance of the whole library:
 const {createServer} = require("http");
 const {WebSocketServer} = require("ws");
 // make an instance of express:
