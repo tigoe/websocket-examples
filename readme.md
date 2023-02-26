@@ -6,9 +6,26 @@ A websocket connection works as follows: the client request via HTTP or HTTPS. T
 
 WebSockets bear some resemblance to MQTT, a message-based protocol for communication between low-power networked devices. Here is a [comparison between the two](https://tigoe.github.io/mqtt-examples/mqtt-vs-websockets.html). 
 
-These examples use two different server-side websocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the websocket connection as a route. 
+## Testing Servers
+To test a websocket client, you need a websocket server. If you don't want to write your own, here are two options:
+
+### Postman.com's Websocket Echo Server
+[Postman](https://www.postman.com/) is a tool for testing various web protocols. It allows you to send all kinds of HTTP, WebSocket, RPC, etc. requests to test the responses a server would give. You can either make an account and use their browser interface or download their [desktop client](https://www.postman.com/downloads/).  Their [WebSocket echo server](https://blog.postman.com/introducing-postman-websocket-echo-service/) supports both the raw WebSocket protocol and some of the additions from the socket.io JavaScript library. It's a useful echo server to test clients on.
+
+### Websocketd
+[Websocketd](http://websocketd.com/) is a command line application, available for MacOS, Windows, and
+Linux, which creates a websocket server and connects it to another command line application. To make it work, you need to have a command line script or program which will listen and respond. The websocketd examples show how to write a simple command line script to respond. You could write something more complex in node.js, python, etc. or you could use the command line program `tee` to echo the response back to the client and save to a local file, like so:
+
+````
+$ websocketd --port=8080 tee log.txt
+````
+Both the Postman WebSocket echo server and the websocketd echo server will only send messages back to the client
+that sends them. Neither will not broadcast to other clients. For a server that will broadcast to all clients, you'll need to write your own. There are a couple of node.js examples below.
 
 ## Servers
+
+These examples use two different server-side websocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the websocket connection as a route. 
+
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws). This example does not serve HTTP requests, just WebSocket connections
 * [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
 * [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
