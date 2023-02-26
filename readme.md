@@ -10,11 +10,11 @@ WebSockets bear some resemblance to MQTT, a message-based protocol for communica
 These clients are duplicated in the `public` directory of each of the servers
 * [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client 
 * [jsClient](jsClient/) - a browser-based example in native JavaScript 
-** [source code link]({{site.codeurl}}jsClient/)
+  * [source code link]({{site.codeurl}}jsClient/)
 * [p5jsClient](p5jsClient/) - a browser-based example in p5.js
-** [source code link]({{site.codeurl}}p5jsClient/)
+  * [source code link]({{site.codeurl}}p5jsClient/)
 * [ArduinoWebsocketClient](ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library
-** [source code link]({{site.codeurl}}ArduinoWebsocketClient/)
+  * [source code link]({{site.codeurl}}ArduinoWebsocketClient/)
 
 ## Testing Servers
 To test a websocket client, you need a websocket server. If you don't want to write your own, here are two options:
