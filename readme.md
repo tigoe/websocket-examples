@@ -12,7 +12,7 @@ These clients can be used with the [ExpressWsServer](https://github.com/tigoe/we
 * [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client. This client attempts to connect to a WebSocket server on port 8080, and then listens to the command line input for text to send. 
 * [jsClient](jsClient/) - a browser-based example in native JavaScript ([source code link](https://github.com/tigoe/websocket-examples/blob/main/jsClient/))
 * [p5jsClient](p5jsClient/) - a browser-based example in p5.js ([source code link](https://github.com/tigoe/websocket-examples/blob/main/p5jsClient/))
-* [ArduinoWebsocketClient]({{site.codeurl}/ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library. It can connect to any of the servers in this repository.
+* [ArduinoWebsocketClient](https://github.com/tigoe/websocket-examples/blob/main/ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library. It can connect to any of the servers in this repository.
 
 ## Testing Servers
 To test a WebSocket client, you need a WebSocket server. If you don't want to write your own, here are two options:
