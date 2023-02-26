@@ -14,13 +14,12 @@ which this client uses, and some of the additions from the socket.io
 JavaScript library.
 
 Here's an echo test with postman.com that will work with this example: 
-````
-  // set up a connection (use WiFiSSLClient):
-  WiFiSSLClient wifi;
-  char serverAddress[] = "ws.postman-echo.com"; 
-  int port = 443;  // standard HTTPS port
-  // When you start the client, add the "/raw" endpoint:
-  client.begin("/raw");
+```
+// set up a WiFi client ( using SSL):
+WiFiSSLClient wifi;
+char serverAddress[] = "ws.postman-echo.com";
+int port = 443;           // standard HTTPS port
+char endpoint[] = "/raw";
 ````
 
 ## Websocketd
@@ -32,12 +31,12 @@ or program which will listen and respond.
 
 Here's a test with websocketd that will also work with this example: 
 ````
-// set up a WiFi connection (no SSL):
-WiFiClient wifi;
-char serverAddress[] = "x.x.x.x";  // replace with your computer's IP
-int port = 8080;  // port that you'll run websocketd on
-  // When you start the client, use no endpoint:
-  client.begin();
+// settings for a local test with websocketd or your own server:
+// set up a WiFi client (not using SSL):
+// WiFiClient wifi;
+// char serverAddress[] = "192.168.1.91"; // fill in your computer's IP address
+// int port = 8080;        // port that websocketd is running on
+// char endpoint[] = "/";  // you can also leave this blank for websocketd
 ````
 Then on your computer, run [websocketd](http://websocketd.com/) like so:
 
