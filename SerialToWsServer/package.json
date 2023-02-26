@@ -1,6 +1,6 @@
 {
   "name": "serialtowsserver",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A serialport-to-websocket server example",
   "main": "server.js",
   "dependencies": {
@@ -15,8 +15,7 @@
   "keywords": [
     "serial",
     "websockets",
-    "ws",
-    "p5js"
+    "ws"
   ],
   "author": "Tom Igoe",
   "license": "ISC"

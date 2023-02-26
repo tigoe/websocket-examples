@@ -1,9 +1,11 @@
 /*
 WebSocket server example
 
-The 'public' directory contains a p5.js sketch and HTML page that will connect to this server and put the sensor data in the HTML page.
+This server does not serve any HTML, or respond to
+HTTP requests, only websocket requests. 
 
 created 11 Nov 2017
+modified 26 Feb 2023
 by Tom Igoe
 */
 var WebSocketServer = require('ws').Server;   // webSocket library

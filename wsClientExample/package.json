@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ws": "^8.12.1"
+  },
+  "name": "wsclientexample",
+  "version": "0.0.2",
+  "description": "a minimal websocket client for node.js",
+  "main": "wsClient.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websockets",
+    "ws",
+    "node.js"
+  ],
+  "author": "Tom Igoe",
+  "license": "ISC"
+}

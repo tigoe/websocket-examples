@@ -8,8 +8,11 @@
   * linemode is whether or not the program should parse for
   the newline character. 
 
+  This server does not serve normal HTTP requests, only
+  websocket requests.
+
   created 6 Oct 2016
-  modified 29 Oct 2021
+  modified 26 Feb 2023
   by Tom Igoe
 */
 
