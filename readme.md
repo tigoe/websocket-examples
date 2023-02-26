@@ -40,7 +40,7 @@ These examples use two different server-side websocket libraries, [ws](https://w
 * [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
 * [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
 
-## Running the Servers
+### Running the Servers
 To get the servers below working, you'll need [node.js](https://www.nodejs.org) installed. Once you have that,  download the repository, then, on the command line, change directories into the directory of each server example. Once you're there, install the libraries using npm, the node package manager, like so:
 
 ````sh
