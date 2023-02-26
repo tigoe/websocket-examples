@@ -7,7 +7,7 @@
   modified 17 Jan 2021
   by Tom Igoe
 */
-const serverURL = 'ws://localhost:8080';
+let serverURL;
 
 let socket;
 // variables for the DOM elements:
@@ -25,6 +25,7 @@ function setup() {
   // set the listeners:
   outgoingText.addEventListener('change', sendMessage);
   connectButton.addEventListener('click', changeConnection);
+  serverURL = document.getElementById('serverURL').value;
   openSocket(serverURL);
 }
 

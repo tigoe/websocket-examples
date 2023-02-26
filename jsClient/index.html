@@ -9,9 +9,13 @@
 </head>
 <body>
   <h1>WebSocket Client</h1>
- <p> This client connects to a local  WebSocket server. It sends when you press return in the outgoing message box.
+ <p> This client connects to a WebSocket server. It sends when you press return in the outgoing message box. 
+</p>
+  <p> Try ws://localhost:8080 if you're running a local server,<br>
+  or wss://ws.postman-echo.com/raw to use the Postman.com websocket echo server.
  </p>
   <div>
+    Server Address: <input type="text" id="serverURL" value="ws://localhost:8080"><br>
     Connected to server: <span id="connection">false</span><br>
     <input type="button" id="connectButton" value="Connect"><br>
     Outgoing message: <input type="text" id="outgoing"><br>
