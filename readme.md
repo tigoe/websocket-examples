@@ -35,7 +35,7 @@ that sends them. Neither will not broadcast to other clients. For a server that 
 These examples the server-side WebSocket library, [ws](https://www.npmjs.com/package/ws). 
 
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws). This example does not serve HTTP requests, just WebSocket connections
-* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [ws](https://www.npmjs.com/package/ws). This example serves both normal HTTP requests for static pages, and WebSocket requests. 
+* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [ws](https://www.npmjs.com/package/ws). This example serves both normal HTTP requests for static pages, and WebSocket requests. This example is also stored on glitch.com at [this link](https://glitch.com/edit/#!/tigoe-websocket-server).
 * [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a WebSocket server. This server can send serial data byte-by-byte to the WebSocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
 
 ### Running the Servers
