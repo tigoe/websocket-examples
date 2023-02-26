@@ -4,7 +4,7 @@
   Connects to a local websocket server
 
   created 7 Jan 2021
-  modified 11 Nov 2021
+  modified 26 Feb 2023
   by Tom Igoe
 */
 // get the server URL from the window.location:

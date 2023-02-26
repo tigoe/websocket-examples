@@ -7,11 +7,11 @@ A WebSocket connection works as follows: the client request via HTTP or HTTPS. T
 WebSockets bear some resemblance to MQTT, a message-based protocol for communication between low-power networked devices. Here is a [comparison between the two](https://tigoe.github.io/mqtt-examples/mqtt-vs-websockets.html). 
 
 ## Clients
-These clients can be used with the [ExpressWsServer]({{site.codeurl}}ExpressWsServer/) as well as on their own, connecting to a different server (see Testing Servers, below). A version of the jsClient is included in the ExpressWsServer directory.
+These clients can be used with the [ExpressWsServer](https://github.com/tigoe/websocket-examples/blob/main/ExpressWsServer/) as well as on their own, connecting to a different server (see Testing Servers, below). A version of the jsClient is included in the ExpressWsServer directory.
 
 * [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client. This client attempts to connect to a WebSocket server on port 8080, and then listens to the command line input for text to send. 
-* [jsClient](jsClient/) - a browser-based example in native JavaScript ([source code link]({{site.codeurl}}jsClient/))
-* [p5jsClient](p5jsClient/) - a browser-based example in p5.js ([source code link]({{site.codeurl}}p5jsClient/))
+* [jsClient](jsClient/) - a browser-based example in native JavaScript ([source code link](https://github.com/tigoe/websocket-examples/blob/main/jsClient/))
+* [p5jsClient](p5jsClient/) - a browser-based example in p5.js ([source code link](https://github.com/tigoe/websocket-examples/blob/main/p5jsClient/))
 * [ArduinoWebsocketClient]({{site.codeurl}/ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library. It can connect to any of the servers in this repository.
 
 ## Testing Servers
