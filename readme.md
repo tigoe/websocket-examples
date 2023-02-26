@@ -49,7 +49,7 @@ This will download the necessary libraries. Then run the server like so:
 node server.js
 ````
 
-The  server `ExpressWsServer` is an HTTP server that also support WebSockets. When you're running it, open a browser and enter `http://localhost:8080/` in the address bar. The server script will serve you the `index.html` page in the `public` folder, which is a browser-based client of the server. You can also load the [jsClient](jsClient) example by opening the `index.html` page from that example in a browser. It will connect to the server running on your terminal window as well. 
+The  server `ExpressWsServer` is an HTTP server that also support WebSockets. When you're running it, open a browser and enter `http://localhost:3000/` in the address bar. The server script will serve you the `index.html` page in the `public` folder, which is a browser-based client of the server. You can also load the [jsClient](jsClient) example by opening the `index.html` page from that example in a browser. It will connect to the server running on your terminal window as well. 
 
 To stop any node.js script, type control-C in the terminal window. 
 
