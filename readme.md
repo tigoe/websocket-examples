@@ -7,14 +7,12 @@ A websocket connection works as follows: the client request via HTTP or HTTPS. T
 WebSockets bear some resemblance to MQTT, a message-based protocol for communication between low-power networked devices. Here is a [comparison between the two](https://tigoe.github.io/mqtt-examples/mqtt-vs-websockets.html). 
 
 ## Clients
-These clients are duplicated in the `public` directory of each of the servers
-* [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client 
-* [jsClient](jsClient/) - a browser-based example in native JavaScript 
-  * [source code link]({{site.codeurl}}jsClient/)
-* [p5jsClient](p5jsClient/) - a browser-based example in p5.js
-  * [source code link]({{site.codeurl}}p5jsClient/)
-* [ArduinoWebsocketClient](ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library
-  * [source code link]({{site.codeurl}}ArduinoWebsocketClient/)
+These clients can be used with the [ExpressWsServer]({{site.codeurl}}ExpressWsServer/) as well as on their own, connecting to a different server (see Testing Servers, below). A version of the jsClient is included in the ExpressWsServer directory. 
+
+* [wsClientExample](https://github.com/tigoe/websocket-examples/tree/main/wsClientExample/) - a node.js command-line client. This client attempts to connect to a websocket server on port 8080, and then listens to the command line input for text to send. 
+* [jsClient](jsClient/) - a browser-based example in native JavaScript ([source code link]({{site.codeurl}}jsClient/))
+* [p5jsClient](p5jsClient/) - a browser-based example in p5.js ([source code link]({{site.codeurl}}p5jsClient/))
+* [ArduinoWebsocketClient]({{site.codeurl}/ArduinoWebsocketClient/) - an Arduino client using the ArduinoHttpClient library
 
 ## Testing Servers
 To test a websocket client, you need a websocket server. If you don't want to write your own, here are two options:
@@ -37,7 +35,7 @@ that sends them. Neither will not broadcast to other clients. For a server that 
 These examples use two different server-side websocket libraries, [ws](https://www.npmjs.com/package/ws) and [express-ws](https://www.npmjs.com/package/express-ws). The latter is just like the former, but integrates better with express.js, so you can just declare the websocket connection as a route. 
 
 * [wsServerExample](https://github.com/tigoe/websocket-examples/tree/main/wsServerExample/) - a server example using [ws](https://www.npmjs.com/package/ws). This example does not serve HTTP requests, just WebSocket connections
-* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). 
+* [ExpressWsServer](https://github.com/tigoe/websocket-examples/tree/main/ExpressWsServer/) - a server example using [express.js](https://expressjs.com/) and [express-ws](https://www.npmjs.com/package/express-ws). This example serves both normal HTTP requests for static pages, and websocket requests. 
 * [SerialToWsServer](https://github.com/tigoe/websocket-examples/tree/main/SerialToWsServer/) - a connector between the local serial port and a websocket server. This server can send serial data byte-by-byte to the websocket clients, or it can read ASCII-encoded text line-by-line. This does not include code to serve HTTP requests, just WebSocket connections. 
 
 ### Running the Servers
