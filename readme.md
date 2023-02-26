@@ -55,4 +55,3 @@ To stop any node.js script, type control-C in the terminal window.
 
 
 The `WsServerExample` does not have a HTTP server included in it, it is just a WebSocket server. You can run it the same way as the others, but only the Arduino example of an HTML file opened from the local filesystem can connect to it. The server will not serve an HTML page itself. 
-
